@@ -1,0 +1,254 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+.main-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #116530;
+}
+
+.new {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo .logo-text {
+    font-size: 40px;
+    font-weight: 500;
+    color: #A3EBB1;
+}
+
+.logo-text:hover {
+    color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #A3EBB1;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .nav-links {
+    list-style-type: none;
+}
+
+nav .nav-links li {
+    display: inline-block;
+}
+
+nav .nav-links li a {
+    color: #A3EBB1;
+    margin-right: 2.5rem;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-decoration: solid;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #18A558;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.2);
+}
+
+.text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text h5 {
+    color: #A3EBB1;
+    font-size: 15px;
+}
+.text h5:hover{
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text h5 span {
+    color: #21B6A8;
+    font-size: 16px;
+}
+
+.text h1 {
+    color: #A3EBB1;
+    font-size: 3rem;
+}
+
+.text h1:hover {
+    color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+}
+.text p {
+    color: #A3EBB1;
+}
+
+.text p:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-grp {
+    margin: 45px 0;
+}
+
+.btn-grp .btn {
+    border-color: #21B6A8;
+    color: #18A558;
+    background-color: #A3EBB1;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #21B6A8;
+    box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+}
+
+.btn-grp .btn:hover{
+    background-color: #116530;
+    color: #fff;
+    font-weight: bold;
+    transition: 1s;
+}
+
+/*Responsive Design**/
+
+@media(max-width:930px) {
+    nav .togglebtn {
+        display: initial;
+    }
+
+    .click {
+        top: 45px
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .nav-links {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #18A558;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .nav-links li {
+        display: block;
+    }
+
+    nav .nav-links li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .nav-links.open {
+        right: 0;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .text {
+        padding: 40px 0px;
+    }
+}
